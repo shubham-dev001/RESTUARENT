@@ -3,6 +3,7 @@ node_modules/
 Backend/node_modules/
 Frontend/frontend/node_modules/
 *.config.env
+config.env
 
 # Logs
 logs
