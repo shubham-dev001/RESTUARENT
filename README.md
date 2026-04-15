@@ -9,14 +9,14 @@ Users can browse the menu, place orders, and manage restaurant operations.
 - Browse menu items
 - Admin panel to manage menu
 - Responsive design
-- Secure authentication (JWT)
+
 
 ---
 
 ## Tech Stack
-- **Frontend:** React.js, Vite, Tailwind CSS
+- **Frontend:** React.js, Vite, 
 - **Backend:** Node.js, Express.js, MongoDB
-- **Other:** congig.env
+- **Other:** config.env
 
 ---
 
