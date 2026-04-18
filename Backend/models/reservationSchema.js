@@ -8,14 +8,14 @@ const reservationSchema = new mongoose.Schema({
         minlength: [3, "first name contain at least 3 character!"],
         maxlength: [30, "first name cannot exceeed 30 character!"],
     },
-    
+
     lastName: {
         type: String,
         required: true,
         minlength: [3, "last name contain at least 3 character!"],
         maxlength: [30, "last name cannot exceeed 30 character!"],
     },
-    
+
     email: {
         type: String,
         required: true,

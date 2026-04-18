@@ -29,7 +29,7 @@ Restaurent Project/
 │ ├── models/
 │ └── server.js
 │
-└── Frontend/
+└── Frontend/frontend
 ├── src/
 ├── public/
 └── package.json
