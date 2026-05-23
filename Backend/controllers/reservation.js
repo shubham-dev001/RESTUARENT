@@ -2,13 +2,13 @@ import ErrorHandler from "../error/error.js";
 import { Reservation } from "../models/reservationSchema.js";
 
 export const sendReservation = async (req, res, next) => {
-    const { firstName, lastName, email, phone, time, date } = req.body;
+    const { firstName, lastName, email, phone, time, date,address } = req.body;
 
-    if (!firstName || !lastName || !email || !phone || !time || !date) {
+    if (!firstName || !lastName || !email || !phone || !time || !date || !address) {
         return next(new ErrorHandler("Please fill full reservation form!", 400));
     }
     try {
-        await Reservation.create({ firstName, lastName, email, phone, time, date });
+        await Reservation.create({ firstName, lastName, email, phone, time, date, address });
         res.status(200).json({
             success: true,
             message: "Reservation sent successfully!",
