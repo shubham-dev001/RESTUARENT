@@ -10,7 +10,8 @@ const Reservation = () => {
   const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [phone, setPhone] = useState(""); // string
+  const [phone, setPhone] = useState(""); 
+  const [address, setAddress] = useState("")
   const navigate = useNavigate();
 
   const handleReservation = async (event) => {
@@ -18,7 +19,7 @@ const Reservation = () => {
     try {
       const { data } = await axios.post(
         "https://restuarent-api.onrender.com/reservation/send",
-        { firstName, lastName, email, date, time, phone },
+        { firstName, lastName, email, date, time, phone, address },
         {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
@@ -33,6 +34,7 @@ const Reservation = () => {
       setDate("");
       setTime("");
       setPhone("");
+      setAddress("");
       navigate("/success");
     } catch (error) {
       toast.error(error?.response?.data?.message || error.message || "Something went wrong!");
@@ -91,7 +93,15 @@ const Reservation = () => {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
-              </div>
+                </div>
+                <div className="full_width">
+                  <input
+                  type="text"
+                  placeholder="Address"
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value)}
+                />
+                </div>
               <button type="submit">
                 RESERVE NOW <HiOutlineArrowNarrowRight />
               </button>
