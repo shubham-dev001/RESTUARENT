@@ -10,7 +10,9 @@ dotenv.config({ path: "./config/config.env" });
 
 app.use(
     cors({
-        origin: "https://restuarent-frontend.onrender.com",
+        origin: [
+            "http://localhost:5173",
+            "https://restuarent-frontend.onrender.com"],
         methods: ["POST"],
         credentials: true,
 
